@@ -1,4 +1,4 @@
-archivo = open("videojuegos50registros.csv.xlsx", "r", encoding="utf-8")
+archivo = open("videojuegos50registros.csv", "r", encoding="latin-1")
 print("Archivo abierto correctamente\n")
 
 for i in range(5):

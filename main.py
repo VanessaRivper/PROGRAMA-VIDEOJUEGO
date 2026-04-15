@@ -18,10 +18,10 @@ def buscar(datos, termino):
         if termino.lower() in texto:
 
             try:
-                nombre = partes[0]
-                plataforma = partes[1]
-                genero = partes[2]
-                ventas = partes[6]
+                nombre = fila[0]
+                plataforma = fila[1]
+                genero = fila[2]
+                ventas = fila[6]
 
                 print("Juego:", nombre, "| Plataforma:", plataforma, "| Ventas:", ventas)
                 contador += 1

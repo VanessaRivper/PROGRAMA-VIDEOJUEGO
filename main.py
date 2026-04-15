@@ -27,8 +27,8 @@ def buscar(datos, entrada):
 
     print("\nSe encontraron", contador, "resultados")
 
-    def menu():
-        datos = cargar_datos()
+def menu():
+    datos = cargar_datos()
     while True:
         print("\n1. Buscar")
         print("2. Estadísticas")

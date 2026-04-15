@@ -10,16 +10,19 @@ def cargar_datos():
 #sigue crear las funciones para el menu
 
 
-def buscar(datos, entrada):
+def buscar(datos, termino):
     contador = 0
-    for fila in datos:
-        if termino.lower() in ",".join(fila).lower():
+
+    for linea in datos:
+        if termino.lower() in linea.lower():
+            partes = linea.strip().split(",")
+
             try:
-                nombre = fila[0]
-                plataforma = fila[1]
-                genero = fila[2]
-                ventas = fila[6]
-        
+                nombre = partes[0]
+                plataforma = partes[1]
+                genero = partes[2]
+                ventas = partes[6]
+
                 print("Juego:", nombre, "| Plataforma:", plataforma, "| Ventas:", ventas)
                 contador += 1
             except:

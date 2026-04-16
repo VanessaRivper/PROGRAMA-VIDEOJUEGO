@@ -7,29 +7,29 @@ def cargar_datos():
         datos.append(info)    
     archivo.close()
     return datos 
-#sigue crear las funciones para el menu
-
-
 def buscar(datos, termino):
     contador = 0
-
     for fila in datos:
         texto = ",".join(fila).lower()
         if termino.lower() in texto:
-
             try:
                 nombre = fila[0]
                 plataforma = fila[1]
                 genero = fila[2]
                 ventas = fila[6]
-
                 print("Juego:", nombre, "| Plataforma:", plataforma, "| Ventas:", ventas)
                 contador += 1
             except:
                 continue
-
     print("\nSe encontraron", contador, "resultados")
-
+def estadisticas(datos):
+    total = len(datos)
+    print(f"\nTotal de videojuegos en la base: {total}")
+def filtrar(datos):
+    p = input("Escribe la plataforma a filtrar (ej: Wii, NES): ")
+    for fila in datos:
+        if p.lower() in fila[1].lower():
+            print(f"Encontrado: {fila[0]}")
 def menu():
     datos = cargar_datos()
     while True:
@@ -46,9 +46,9 @@ def menu():
         elif opcion == "3":
             filtrar(datos)
         elif opcion == "4":
+            print("¡Adiós!")
             break
         else:
             print("Opción inválida")
-
 menu()
         

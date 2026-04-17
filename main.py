@@ -37,7 +37,7 @@ def estadisticas(datos):
     print(f"Promedio de ventas: {round(promedio,2)} millones")
 
 def filtrar(datos):
-    p = input("Escribe la plataforma que quieres filtrar: ")
+    p = input("Escribe lo que quieras filtrar: ")
     encontrados = 0
     for fila in datos:
         if p.lower() in fila[1].lower():

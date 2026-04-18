@@ -36,16 +36,16 @@ def estadisticas(datos):
     print(f"Ventas totales: {round(suma,2)} millones")
     print(f"Promedio de ventas: {round(promedio,2)} millones")
 def filtrar(datos):
-    p = input("Escribe lo que quieras filtrar: ").strip
+    p = input("Escribe lo que quieras filtrar: ").strip()
     contador = 0
     for fila in datos:
         if p.lower() in fila[1].lower():
             print("Juego:", fila[0], "| Plataforma:", fila[1], "| Ventas:", fila[6])
             contador += 1
-        if contador == 0:
-        print(f"No se encontraron juegos para la plataforma '{p}'.")
-        else:
-        print(f"\nTotal encontrado: {contador} registros.")
+    if contador == 0:
+         print(f"No se encontraron juegos para la plataforma '{p}'.")
+     else:
+         print(f"\nTotal encontrado: {contador} registros.")
 def menu():
     datos = cargar_datos()
     while True:

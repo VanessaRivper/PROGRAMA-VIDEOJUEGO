@@ -44,7 +44,7 @@ def filtrar(datos):
             contador += 1
     if contador == 0:
          print(f"No se encontraron juegos para la plataforma '{p}'.")
-     else:
+    else:
          print(f"\nTotal encontrado: {contador} registros.")
 def menu():
     datos = cargar_datos()

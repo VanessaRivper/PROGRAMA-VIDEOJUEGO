@@ -1,4 +1,4 @@
-                                     🎮 GAMESCOPE 🎮
+🎮 GAMESCOPE: PROYECTO DE ANÁLISIS DE VIDEOJUEGOS 🎮
 
 🎮Integrantes:
 

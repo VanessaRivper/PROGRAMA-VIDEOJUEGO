@@ -60,13 +60,16 @@ def filtrar(datos):
     resultados = []
     
     for fila in datos:
-        if p.lower() in fila[1].lower():
-            print("Juego:", fila[0], 
-                  "| Plataforma:", fila[1], 
-                  "| Ventas:", fila[6])
+        try:
+            if p.lower() in fila[1].lower():
+                print("Juego:", fila[0], 
+                      "| Plataforma:", fila[1], 
+                      "| Ventas:", fila[6])
             
-            contador += 1
-            resultados.append(fila)
+                contador += 1
+                resultados.append(fila)
+        except:
+            continue
 
     if contador == 0:
          print(f"No se encontraron juegos para la plataforma '{p}'.")

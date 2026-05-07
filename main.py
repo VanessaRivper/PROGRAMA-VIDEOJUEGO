@@ -8,7 +8,8 @@ while True:
     print("1. Buscar")
     print("2. Estadísticas") 
     print("3. Filtrar")
-    print("4. Salir")
+    print("4. Historial")
+    print("5. Salir")
     
     opcion = input("Elige una opción: ")
     
@@ -18,7 +19,7 @@ while True:
         guardar_hist(entrada, len(resultados))
         guardar = input("¿Desea guardar los resultados? (s/n): ")
 
-        if guardar == "s":
+        if guardar.lower() == "s":
             guardar_csv("Busqueda.csv", resultados)
         
     elif opcion == "2":
@@ -28,8 +29,11 @@ while True:
     elif opcion == "3":
         resultados = filtrar(datos)
         guardar_hist("filtro", len(resultados))
-                          
+
     elif opcion == "4":
+        ver_historial()
+                          
+    elif opcion == "5":
         print("¡Adiós! El programa ha finalizado")  
         break
     else:

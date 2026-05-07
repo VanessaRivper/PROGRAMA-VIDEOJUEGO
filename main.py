@@ -1,22 +1,38 @@
-def menu():
-    datos = cargar_datos()
-    while True:
-        print("\n1. Buscar")
-        print("2. Estadísticas")
-        print("3. Filtrar")
-        print("4. Salir")
-        opcion = input("Elige una opción: ")
-        if opcion == "1":
-            entrada = input("Ingrese búsqueda: ")
-            buscar(datos, entrada)
-        elif opcion == "2":
-            estadisticas(datos)
-        elif opcion == "3":
-            filtrar(datos)
-        elif opcion == "4":
-            print("¡Adiós!")
-            break
-        else:
-            print("Opción inválida")
+from archivos import *
+from Analisis import *
+
+datos = cargar_datos()
+
+while True:
+    print("\n---- MENÚ ----")
+    print("1. Buscar")
+    print("2. Estadísticas") 
+    print("3. Filtrar")
+    print("4. Salir")
+    
+    opcion = input("Elige una opción: ")
+    
+    if opcion == "1":
+        entrada = input("Ingrese búsqueda: ")
+        resultado = buscar(datos, entrada)
+        guardar_hist(entrada, len(resultados))
+        guardar = input("¿Desea guardar los resultados? (s/n): ")
+
+        if guardar == "s":
+            guardar_csv("Busqueda.csv", resultados)
+        
+    elif opcion == "2":
+        estadisticas(datos)
+        guardar_hist("estadísticas", 1)
+        
+    elif opcion == "3":
+        resultados = filtrar(datos, valor)
+        guardar_historial("filtro", len(resultados)
+                          
+    elif opcion == "4":
+        print("¡Adiós! El programa ha finalizado")  
+        break
+    else:
+        print("Opción inválida")
 menu()
         

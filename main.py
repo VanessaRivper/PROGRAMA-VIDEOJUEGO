@@ -1,5 +1,5 @@
 from archivos import *
-from Analisis import *
+from analisis import *
 
 datos = cargar_datos()
 

@@ -41,9 +41,10 @@ def ver_historial():
     lector = csv.reader(archivo)
     print("\n---- HISTORIAL ----")
     for fila in lector:
-      print("Fecha:", fila[0],
-            "| Consulta:", fila[1],
-            "| Resultados:", fila[2])
-      archivo.close()
+      if len(fila)>=3:
+        print("Fecha:", fila[0],
+              "| Consulta:", fila[1],
+              "| Resultados:", fila[2])
+    archivo.close()
   except:
     print("No hay historial guardado")

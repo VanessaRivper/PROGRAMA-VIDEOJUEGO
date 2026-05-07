@@ -14,7 +14,7 @@ while True:
     
     if opcion == "1":
         entrada = input("Ingrese búsqueda: ")
-        resultado = buscar(datos, entrada)
+        resultados = buscar(datos, entrada)
         guardar_hist(entrada, len(resultados))
         guardar = input("¿Desea guardar los resultados? (s/n): ")
 
@@ -26,13 +26,12 @@ while True:
         guardar_hist("estadísticas", 1)
         
     elif opcion == "3":
-        resultados = filtrar(datos, valor)
-        guardar_historial("filtro", len(resultados)
+        resultados = filtrar(datos)
+        guardar_hist("filtro", len(resultados))
                           
     elif opcion == "4":
         print("¡Adiós! El programa ha finalizado")  
         break
     else:
         print("Opción inválida")
-menu()
         

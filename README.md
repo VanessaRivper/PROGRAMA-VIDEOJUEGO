@@ -35,16 +35,16 @@
 🎮Funciones del programa:
 
   Nuestro programa le permite al usuario explorar dentro del dataset de manera rápida, a través de un menú, la acción que desea realizar. A partir de esta selección, nuestros usuarios podrán tener estadísticas basicas de la informacion recolectada y filtrar los datos según condiciones definidas por el usuario y guardar los resultados obtenidos en archivos CSV.
-  Además, el sistema registra automáticamente el historial de consultas realizadas, permitiendo al usuario continuar explorando y comprendiendo la evolución y trayectoria de los videojuegos de una manera sencilla y organizada
+  Además, el sistema registra automáticamente el historial de consultas realizadas, permitiendo al usuario continuar explorando y comprendiendo la evolución y trayectoria de los videojuegos de una manera sencilla y organizada.
   
 🎮Cómo correr el programa:
   1. Descargar el repositorio.
-  2. Abrir la carpeta en Visual Studio Code.
+  2. Abrir la carpeta del proyecto en Visual Studio Code.
   3. Ejecutar el archivo main.py.
   4. Usar el menú en consola.
 
 🎮Estado del proyecto:
 
-  Entrega 1: Actualmente el programa permite leer el dataset, realizar busquedas dentro de este, conocer estadísticas y obtener informacion de interes a partir de filtros específicos.
+  Entrega 1: Actualmente el programa permite cargar el dataset utilizando csv.reader, realizar busquedas y filtros, obtener estadísticas básicas sobre las ventas de videojuegos, guardar resultados en archivos CSV y registrar automáticamente el historial de consultas realizadas por el usuario.
 
  🎮 By PLAY ANALYTICS 🎮
